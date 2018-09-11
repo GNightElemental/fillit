@@ -3,45 +3,43 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rhallste <rhallste@student.42.fr>          +#+  +:+       +#+         #
+#    By: rhallste <rhallste@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/18 09:37:14 by rhallste          #+#    #+#              #
-#    Updated: 2017/10/05 15:08:44 by rhallste         ###   ########.fr        #
+#    Updated: 2018/09/11 10:46:50 by sjuery           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= 	fillit
-LIBNAME		=	libft.a
-
-TESTFILE	=	valid11
+LIBNAME		=	srcs/libft.a
 
 CC			=	gcc
 CFLAGS		=	-Wall -Werror -Wextra
 
-LIBLIST		=	ft_bzero				\
-				ft_free_2d_array		\
-				ft_memalloc				\
-				ft_memset				\
-				ft_putchar				\
-				ft_putchar_fd			\
-				ft_putstr				\
-				ft_putstr_fd			\
-				ft_strcpy				\
-				ft_strdup				\
-				ft_strsub				\
-				ft_strlen				\
-				ft_strncat				\
-				ft_strncpy				\
-				ft_strnew				\
-				ft_swap
+LIBLIST		=	srcs/ft_bzero				\
+				srcs/ft_free_2d_array		\
+				srcs/ft_memalloc			\
+				srcs/ft_memset				\
+				srcs/ft_putchar				\
+				srcs/ft_putchar_fd			\
+				srcs/ft_putstr				\
+				srcs/ft_putstr_fd			\
+				srcs/ft_strcpy				\
+				srcs/ft_strdup				\
+				srcs/ft_strsub				\
+				srcs/ft_strlen				\
+				srcs/ft_strncat				\
+				srcs/ft_strncpy				\
+				srcs/ft_strnew				\
+				srcs/ft_swap
 
-MAINLIST	=	validate_input			\
-				tetri_split				\
-				read_input				\
-				coords					\
-				main					\
-				backtracking			\
-				finder					
+MAINLIST	=	srcs/validate_input			\
+				srcs/tetri_split			\
+				srcs/read_input				\
+				srcs/coords					\
+				srcs/main					\
+				srcs/backtracking			\
+				srcs/finder
 
 LIBSRCS		=	$(addsuffix .c, $(LIBLIST))
 LIBOBJS		=	$(addsuffix .o, $(LIBLIST))
