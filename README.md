@@ -45,4 +45,4 @@ A..C.
 ADD..
 DD...
 ```
-Obviously, because this is using backtracking, the more the Tetriminos, the longer it will take to generate the smallest square.
+Because this is using backtracking, the more the Tetriminos, the longer it will take to find the smallest square.
