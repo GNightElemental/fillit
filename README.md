@@ -18,7 +18,7 @@ Make
 ```
 
 The type of file the program takes is a simple TxT file, with 4x4 Tetriminos pieces seperated by a new line.
-Check the Sample_files folder for some examples
+Check the sample_files folder for some examples
 
 ## Running the program
 
@@ -29,6 +29,7 @@ To run the program:
 ```
 
 Below is an example of a valid input:
+Keep in mind that the larger the input file the longer it will take for the program to finish
 
 ```
 cat -e valid_sample
@@ -60,7 +61,7 @@ $
 
 ### Expected output
 
-In this case, the program goes through the smallest possible square (2x2), and checks if piece a fits. If it dosen't it expands the square to 3x3, and checks if it fits. This goes on until all pieces managed to fit into the smallest square possible. Each piece is labelled with a letter of the Alphabet. Piece 1 is A, piece 2 is B... 
+In this case, the program goes through the smallest possible square (2x2), and checks if piece a fits. If it dosen't it expands the square to 3x3, and checks if it fits. This goes on until all pieces managed to fit into the smallest square possible. Each piece is labelled with a letter of the Alphabet. Piece 1 is A, piece 2 is B...
 
 ```
 ./fillit fillit_file             
