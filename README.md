@@ -9,85 +9,29 @@ assemble a given Tetriminos set altogether in the smallest possible square.
 ### Installing
 
 The code was written in C, on Mac OSX.
-To run the code simply git clone the file, and Make
+To run the code:
 
 ```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
-During this project, we went for backtracking, allowing us to get a correct sollution at a reasonable speed.
-
-To compile just:
-```
+git clone https://github.com/sjuery/Fillit.git fillit
+cd fillit
 Make
-./Fillit [FileName.Fillit]
 ```
 
-A fillit file consists of valid Tetriminos, seperated by a new line:
+The type of file the program takes is a simple TxT file, with 4x4 Tetriminos pieces seperated by a new line.
+Check the Sample_files folder for some examples
+
+## Running the program
+
+To run the program:
+
 ```
-cat -e valid_sample.fillit
+./Fillit valid_sample
+```
+
+Below is an example of a valid input:
+
+```
+cat -e valid_sample
 ...#$
 ...#$
 ...#$
@@ -107,13 +51,26 @@ $
 ..##$
 .##.$
 ....$
+$
+....$
+.##.$
+.##.$
+....$
 ```
-In this case the output should look something like this:
+
+### Expected output
+
+In this case, the program goes through the smallest possible square (2x2), and checks if piece a fits. If it dosen't it expands the square to 3x3, and checks if it fits. This goes on until all pieces managed to fit into the smallest square possible. Each piece is labelled with a letter of the Alphabet. Piece 1 is A, piece 2 is B... 
+
 ```
+./fillit fillit_file             
 ABBBB
 ACCC.
 A..C.
-ADD..
-DD...
+ADDEE
+DD.EE
 ```
-Because this is using backtracking, the more the Tetriminos, the longer it will take to find the smallest square.
+
+## Authors
+* **Stanislas Juery** - *Author* - (https://github.com/sjuery/)
+* **RJ Hallsted** - *Project Partner* - (https://github.com/rjhallsted/)
